@@ -1,0 +1,13 @@
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\bin\Debug\netcoreapp3.1\FizzBuzz_Console.exe
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\bin\Debug\netcoreapp3.1\FizzBuzz_Console.deps.json
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\bin\Debug\netcoreapp3.1\FizzBuzz_Console.runtimeconfig.json
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\bin\Debug\netcoreapp3.1\FizzBuzz_Console.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\bin\Debug\netcoreapp3.1\FizzBuzz_Console.dll
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\bin\Debug\netcoreapp3.1\FizzBuzz_Console.pdb
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\obj\Debug\netcoreapp3.1\FizzBuzz_Console.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\obj\Debug\netcoreapp3.1\FizzBuzz_Console.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\obj\Debug\netcoreapp3.1\FizzBuzz_Console.AssemblyInfo.cs
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\obj\Debug\netcoreapp3.1\FizzBuzz_Console.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\obj\Debug\netcoreapp3.1\FizzBuzz_Console.dll
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\obj\Debug\netcoreapp3.1\FizzBuzz_Console.pdb
+C:\Users\Admin\Desktop\.NET Core\.Net\FizzBuzz_Console\FizzBuzz_Console\obj\Debug\netcoreapp3.1\FizzBuzz_Console.genruntimeconfig.cache

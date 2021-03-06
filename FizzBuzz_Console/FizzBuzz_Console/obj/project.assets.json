@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\.NET Core\\.Net\\FizzBuzz_Console\\FizzBuzz_Console\\FizzBuzz_Console\\FizzBuzz_Console.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\.NET Core\\.Net\\FizzBuzz_Console\\FizzBuzz_Console\\FizzBuzz_Console.csproj",
       "projectName": "FizzBuzz_Console",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\.NET Core\\.Net\\FizzBuzz_Console\\FizzBuzz_Console\\FizzBuzz_Console\\FizzBuzz_Console.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\.NET Core\\.Net\\FizzBuzz_Console\\FizzBuzz_Console\\FizzBuzz_Console.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\.NET Core\\.Net\\FizzBuzz_Console\\FizzBuzz_Console\\FizzBuzz_Console\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\.NET Core\\.Net\\FizzBuzz_Console\\FizzBuzz_Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
