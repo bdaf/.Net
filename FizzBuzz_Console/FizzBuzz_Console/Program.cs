@@ -14,17 +14,17 @@ namespace FizzBuzz_Console{
                 if(input == "exit")
                     return;
                 Console.WriteLine();
-                if(!int.TryParse(input, out typedNumber)) {
+                if(!int.TryParse(input, out typedNumber)) 
+                {
                     Console.WriteLine("Type number which is integer.");
                     continue;
                 }
-                if(typedNumber%3 == 0 || typedNumber%5 == 0) {
-                    if(typedNumber % 3 == 0) {
+                if(typedNumber%3 == 0 || typedNumber%5 == 0) 
+                {
+                    if(typedNumber % 3 == 0) 
                         Console.Write("fizz");
-                    }
-                    if(typedNumber % 5 == 0) {
+                    if(typedNumber % 5 == 0) 
                         Console.Write("buzz");
-                    }
                     Console.WriteLine();
                 } else {
                     Console.WriteLine(typedNumber);
