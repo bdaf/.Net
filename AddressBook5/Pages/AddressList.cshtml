@@ -1,0 +1,20 @@
+﻿@page
+@model AddressBook5.Pages.AddressListModel
+@{
+    ViewData["Title"] = "List Of Addresses";
+}
+
+<p>Data saved in session:</p>
+
+@{ if(Model.Addresses.Count() > 0) {
+        foreach(Models.Address Add in Model.Addresses) { 
+        <p>@Html.DisplayNameFor(model => Add.Street): @Add.Street </p>
+        <p>@Html.DisplayNameFor(model => Add.Number): @Add.Number </p>
+        <p>@Html.DisplayNameFor(model => Add.ZipCode): @Add.ZipCode </p>
+        <p>@Html.DisplayNameFor(model => Add.City): @Add.City </p>
+        <br />
+        }
+    } else {
+        <p>There is not data in session!</p>
+    }
+}
