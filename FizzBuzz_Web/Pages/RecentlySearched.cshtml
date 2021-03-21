@@ -1,0 +1,20 @@
+﻿@page
+@model FizzBuzz_Web.Pages.RecentlySearchedModel
+@{
+    ViewData["Title"] = "Recently Searched Results";
+}
+
+<h2>@ViewData["Title"]:</h2>
+
+@{
+    if(Model.FizzBuzzes.Count > 0) { <br />
+        foreach(Models.FizzBuzz_Data FB in Model.FizzBuzzes) {
+            <p>@Html.DisplayNameFor(model => FB.Number): @FB.Number </p>
+            <p>@Html.DisplayNameFor(model => FB.Result): @FB.Result </p>
+            <p>@Html.DisplayNameFor(model => FB.Date): @FB.Date </p>
+            <br />
+        }
+    } else {
+        <p>There is not data in session!</p>
+    }
+}
