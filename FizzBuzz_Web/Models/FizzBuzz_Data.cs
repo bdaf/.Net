@@ -21,7 +21,7 @@ namespace FizzBuzz_Web.Models {
             if(Number % 5 == 0)
                 Result += "Buzz";
             if(Result == "")
-                Result += Number;
+                Result += "Liczba: "+ Number+" nie spełnia kryteriów Fizz/Buzz";
         }
         public static List<FizzBuzz_Data> ConvertToListFromJSON(string FizzBuzzJSON) {
             if(FizzBuzzJSON != null)
