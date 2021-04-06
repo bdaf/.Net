@@ -25,7 +25,6 @@ namespace FizzBuzz_Web.Pages {
                 var FizzBuzzJSON = HttpContext.Session.GetString("FizzBuzz_Session");
                 FizzBuzzes = FizzBuzz_Data.ConvertToListFromJSON(FizzBuzzJSON);
                 FizzBuzz.CountResult();
-                FizzBuzz.Date = DateTime.Now.ToString("U");
                 FizzBuzzes.Add(FizzBuzz);
                 HttpContext.Session.SetString("FizzBuzz_Session", JsonConvert.SerializeObject(FizzBuzzes));
             }
