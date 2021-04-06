@@ -9,7 +9,6 @@ namespace FizzBuzz_Web.Data {
     public class FizzBuzzContext : DbContext{
         public FizzBuzzContext(DbContextOptions options) : base(options) {
         }
-
         public DbSet<FizzBuzz_Data> FizzBuzz_Data { get; set; }
     }
 }

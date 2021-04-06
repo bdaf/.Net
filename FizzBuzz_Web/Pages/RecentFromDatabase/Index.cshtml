@@ -1,0 +1,50 @@
+﻿@page
+@model FizzBuzz_Web.Pages.RecentFromDatabase.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="text-align: center; margin: 30px">Top 10 Recently Searched Results!</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FizzBuzz_Data[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FizzBuzz_Data[0].Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FizzBuzz_Data[0].Result)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FizzBuzz_Data[0].Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.FizzBuzz_Data) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Result)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

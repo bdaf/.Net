@@ -14,7 +14,7 @@ namespace FizzBuzz_Web.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Number = table.Column<int>(nullable: false),
-                    Result = table.Column<string>(type: "varchar(8)", maxLength: 8, nullable: true),
+                    Result = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
                     Date = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>

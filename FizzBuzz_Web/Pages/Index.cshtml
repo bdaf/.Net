@@ -5,20 +5,22 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 style="margin: 30px" >Welcome in FizzBuzz!</h1>
     <p>Type the number and find out if it's Fizz, Buzz or both!</p>
-    <form method="post">
+    <form style="margin-top: 30px" method="post">
         <label asp-for="FizzBuzz.Number"></label>
         <input asp-for="FizzBuzz.Number" /><br />
         <b><span asp-validation-for="FizzBuzz.Number" class="text-danger"></span></b><br />
         <button type="submit">Zatwierdź</button>
     </form> <br />
     @{ 
+        string Result = "There is no result yet!";
         if(Model.FizzBuzz != null) {
-            <h2>@Model.FizzBuzz.Result</h2>
-        } else {
-            <h2>There is no result yet!</h2>
+            if(Model.FizzBuzz.Result != null){
+                Result = @Model.FizzBuzz.Result;
+            }
         }
+        <h2>@Result</h2>
     }
 
 </div>
