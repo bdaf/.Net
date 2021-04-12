@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ContosoCrafts.Models {
     public class Product {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Maker { get; set; }
         [JsonPropertyName("img")]
         public string Image { get; set; }
