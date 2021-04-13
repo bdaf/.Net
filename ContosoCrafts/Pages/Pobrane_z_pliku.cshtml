@@ -1,0 +1,19 @@
+﻿@page
+@model ContosoCrafts.Pages.Pobrane_z_plikuModel
+@{
+    ViewData["Title"] = "Pobrane z pliku";
+}
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <br />
+    <div class="card-columns">
+        @foreach(var product in Model.Products) {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Image');"></div>
+                <div class="card-body">
+                    <h5 class="card-title">@product.Title</h5>
+                </div>
+            </div>
+        }
+    </div>
+</div>
