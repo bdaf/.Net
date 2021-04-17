@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 
 namespace ContosoCrafts.Models {
     public class Product {
+        [JsonIgnore]
         public int Id { get; set; }
+        [NotMapped]
+        [JsonPropertyName("id")]
+        public string IdString { get; set; }
         [Required]
         [MaxLength(250)]
         public string Maker { get; set; }

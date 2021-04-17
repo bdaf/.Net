@@ -2,7 +2,7 @@
 
 namespace ContosoCrafts.Migrations
 {
-    public partial class InitSchema : Migration
+    public partial class InitSchemaWithDataAnnotiationsAndSplittedId : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,11 +12,11 @@ namespace ContosoCrafts.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Maker = table.Column<string>(nullable: true),
-                    Image = table.Column<string>(nullable: true),
-                    Url = table.Column<string>(nullable: true),
-                    Title = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true)
+                    Maker = table.Column<string>(maxLength: 250, nullable: false),
+                    Image = table.Column<string>(type: "varchar(600)", maxLength: 600, nullable: false),
+                    Url = table.Column<string>(type: "varchar(600)", maxLength: 600, nullable: false),
+                    Title = table.Column<string>(maxLength: 100, nullable: false),
+                    Description = table.Column<string>(maxLength: 500, nullable: false)
                 },
                 constraints: table =>
                 {

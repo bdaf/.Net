@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoCrafts.Migrations
 {
     [DbContext(typeof(ManufactureContext))]
-    [Migration("20210413182158_AddDataAnnotation")]
-    partial class AddDataAnnotation
+    [Migration("20210417215913_InitSchemaWithDataAnnotiationsAndSplittedId")]
+    partial class InitSchemaWithDataAnnotiationsAndSplittedId
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

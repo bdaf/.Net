@@ -23,8 +23,6 @@ namespace ContosoCrafts.Services {
                     new JsonSerializerOptions {
                         PropertyNameCaseInsensitive = true
                     });
-                ;
-                ;
             }
         }
     }
