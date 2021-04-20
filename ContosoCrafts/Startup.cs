@@ -27,6 +27,7 @@ namespace ContosoCrafts {
             services.AddDbContext<ManufactureContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("ContosoCraftsDB"));
             });
+            services.AddBrowserDetection();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +42,7 @@ namespace ContosoCrafts {
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseBadBrowserMiddleware();
             app.UseRouting();
 
             app.UseAuthorization();
