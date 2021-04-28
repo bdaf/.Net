@@ -17,6 +17,8 @@ namespace FizzBuzz_Web.Models {
         [Column(TypeName="varchar(50)")]
         public string Result { get; set; }
         public DateTime Date{ get; set; }
+        [MaxLength(256)]
+        public string Author { get; set; }
 
         internal void CountResult() {
             Result = "";

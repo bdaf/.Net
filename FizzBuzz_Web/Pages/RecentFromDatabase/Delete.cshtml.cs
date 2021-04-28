@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using FizzBuzz_Web.Data;
 using FizzBuzz_Web.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using FizzBuzz_Web.Areas.Identity.Data;
 
 namespace FizzBuzz_Web.Pages.RecentFromDatabase
 {
@@ -16,9 +18,12 @@ namespace FizzBuzz_Web.Pages.RecentFromDatabase
     {
         private readonly FizzBuzz_Web.Data.FizzBuzzContext _context;
 
-        public DeleteModel(FizzBuzz_Web.Data.FizzBuzzContext context)
+        private readonly UserManager<FizzBuzz_User> _userManager;
+
+        public DeleteModel(FizzBuzz_Web.Data.FizzBuzzContext context, UserManager<FizzBuzz_User> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         [BindProperty]
@@ -33,7 +38,7 @@ namespace FizzBuzz_Web.Pages.RecentFromDatabase
 
             FizzBuzz_Data = await _context.FizzBuzz_Data.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (FizzBuzz_Data == null)
+            if (FizzBuzz_Data == null || FizzBuzz_Data.Author==null || !(FizzBuzz_Data.Author.Equals(_userManager.GetUserName(User))))
             {
                 return NotFound();
             }
