@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FizzBuzz_Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FizzBuzz_Web.Data
 {
-    public class FizzBuzz_WebContext : IdentityDbContext<IdentityUser>
+    public class FizzBuzzDBContext : IdentityDbContext<FizzBuzz_User>
     {
-        public FizzBuzz_WebContext(DbContextOptions<FizzBuzz_WebContext> options)
+        public FizzBuzzDBContext(DbContextOptions<FizzBuzzDBContext> options)
             : base(options)
         {
         }

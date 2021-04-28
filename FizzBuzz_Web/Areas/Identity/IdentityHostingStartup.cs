@@ -1,4 +1,5 @@
 ﻿using System;
+using FizzBuzz_Web.Areas.Identity.Data;
 using FizzBuzz_Web.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -15,12 +16,12 @@ namespace FizzBuzz_Web.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<FizzBuzz_WebContext>(options =>
+                services.AddDbContext<FizzBuzzDBContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("FizzBuzz_WebContextConnection")));
+                        context.Configuration.GetConnectionString("FizzBuzzDBContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<FizzBuzz_WebContext>();
+                services.AddDefaultIdentity<FizzBuzz_User>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddEntityFrameworkStores<FizzBuzzDBContext>();
             });
         }
     }

@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using FizzBuzz_Web.Data;
 using FizzBuzz_Web.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FizzBuzz_Web.Pages.RecentFromDatabase
 {
+    [Authorize]
     public class DeleteModel : PageModel
     {
         private readonly FizzBuzz_Web.Data.FizzBuzzContext _context;

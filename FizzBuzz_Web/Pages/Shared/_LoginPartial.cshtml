@@ -1,7 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using FizzBuzz_Web.Areas.Identity.Data
 
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<FizzBuzz_User> SignInManager
+@inject UserManager<FizzBuzz_User> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
