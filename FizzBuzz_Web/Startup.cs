@@ -1,9 +1,11 @@
 using FizzBuzz_Web.Areas.Identity.Data;
 using FizzBuzz_Web.Data;
+using FizzBuzz_Web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +28,8 @@ namespace FizzBuzz_Web {
             services.AddDbContext<FizzBuzzContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("FizzBuzzDB"));
             });
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.Configure<AuthMessageSenderOptions>(Configuration);
             services.AddRazorPages();
             services.AddMemoryCache();
             services.AddSession();
