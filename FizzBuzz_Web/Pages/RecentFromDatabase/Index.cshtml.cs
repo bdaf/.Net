@@ -28,7 +28,7 @@ namespace FizzBuzz_Web.Pages.RecentFromDatabase
             var Results = from p in _context.FizzBuzz_Data
                                        orderby p.Date descending
                                        select p;
-            FizzBuzz_Data = await Results.Take(10).ToListAsync();
+            FizzBuzz_Data = await Results.Take(20).ToListAsync();
         }
     }
 }
