@@ -38,9 +38,12 @@ namespace FizzBuzz_Web.Pages.RecentFromDatabase
 
             FizzBuzz_Data = await _context.FizzBuzz_Data.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (FizzBuzz_Data == null || FizzBuzz_Data.Author==null || !(FizzBuzz_Data.Author.Equals(_userManager.GetUserName(User))))
+            if (FizzBuzz_Data == null || FizzBuzz_Data.Author==null)
             {
                 return NotFound();
+            }
+            if(!FizzBuzz_Data.Author.Equals(_userManager.GetUserName(User))) {
+                return Forbid();
             }
             return Page();
         }
